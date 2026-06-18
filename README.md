@@ -37,12 +37,34 @@ Visita la sección de contacto en el sitio para solicitar información, una demo
 
 ## Publicación
 
-El sitio se publica en **GitHub Pages**:
+Sitio publicado en **https://resorias.com** (GitHub Pages + dominio personalizado).
 
-**https://marvinzzvla.github.io/Restoria-Website/**
+El repositorio no incluye `dist/`; GitHub Actions compila y despliega al hacer push a `master`.
 
-El repositorio no incluye `dist/` (es correcto). GitHub Actions compila y despliega automáticamente al hacer push a `master`.
+### Configurar DNS en tu proveedor de dominio
 
-**Activar Pages (solo una vez):** en el repo ve a **Settings → Pages → Build and deployment → Source** y elige **GitHub Actions** (no «Deploy from a branch»). Luego vuelve a ejecutar el workflow o haz push.
+En el panel DNS de **resoria.com**, crea estos registros ([guía de GitHub Pages](https://docs.github.com/es/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)):
+
+**Dominio raíz (`resoria.com`)** — 4 registros tipo **A**:
+
+| Tipo | Nombre | Valor |
+|------|--------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+
+**Subdominio `www` (recomendado)** — 1 registro **CNAME**:
+
+| Tipo | Nombre | Valor |
+|------|--------|-------|
+| CNAME | `www` | `marvinzzvla.github.io` |
+
+### En GitHub (solo una vez)
+
+1. **Settings → Pages → Custom domain** → escribe `resoria.com` y guarda.
+2. Espera la verificación DNS (puede tardar hasta 24 h).
+3. Activa **Enforce HTTPS** cuando GitHub lo permita.
+4. **Source** debe ser **GitHub Actions**.
 
 © Resoria — Easy Restaurant & Mi Inventario
