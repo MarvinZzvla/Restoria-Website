@@ -43,9 +43,9 @@ El repositorio no incluye `dist/`; GitHub Actions compila y despliega al hacer p
 
 ### Configurar DNS en tu proveedor de dominio
 
-En el panel DNS de **resoria.com**, crea estos registros ([guía de GitHub Pages](https://docs.github.com/es/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)):
+En el panel DNS de **resorias.com**, crea estos registros ([guía de GitHub Pages](https://docs.github.com/es/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages)):
 
-**Dominio raíz (`resoria.com`)** — 4 registros tipo **A**:
+**Dominio raíz (`resorias.com`)** — 4 registros tipo **A**:
 
 | Tipo | Nombre | Valor |
 |------|--------|-------|
@@ -62,7 +62,7 @@ En el panel DNS de **resoria.com**, crea estos registros ([guía de GitHub Pages
 
 ### En GitHub (solo una vez)
 
-1. **Settings → Pages → Custom domain** → escribe `resoria.com` y guarda.
+1. **Settings → Pages → Custom domain** → escribe `resorias.com` y guarda.
 2. Espera la verificación DNS (puede tardar hasta 24 h).
 3. Activa **Enforce HTTPS** cuando GitHub lo permita.
 4. **Source** debe ser **GitHub Actions**.
